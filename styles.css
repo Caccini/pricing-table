@@ -1,0 +1,409 @@
+:root {
+    --clr-neutral-100: hsl(0 0% 100%);
+    --clr-neutral-200: hsl(225, 100%, 98%);
+    --clr-neutral-400: hsla(223, 23%, 55%, 1);
+    --clr-neutral-800: hsl(223, 47%, 23%);
+
+    --clr-primary-200: hsl(225, 100%, 94%);
+    --clr-primary-300: hsla(245, 83%,68%, 1);
+    --clr-primary-400: hsl(245, 75%, 52%);
+
+    --fs-700: 1.75rem;
+    --fs-400: 1rem;
+    --fs-300: 0.875rem;
+
+    --fw-400: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    line-height: 1.6;
+    color: var(--clr-neutral-400);
+    background-color: var(--clr-neutral-200);
+
+    /* for demo only */
+    
+    
+}
+
+h1, 
+h2, 
+h3 {
+    line-height: 1.1;
+    color: #2E2A43;
+}
+
+h2 {
+    font-size: var(--fs-700);
+    color: var(--clr-neutral-800);
+}
+
+/* composition */ 
+
+.flow > * + * {
+    margin-top: 1em;
+}
+
+/* utility */
+
+.padding-48 {
+     /* 3 x 16 = 48 */
+}
+
+.text-neutral-400 {
+    color: var(--clr-neutral-400);
+}
+
+.text-neutral-100 {
+    color: var(--clr-neutral-100);
+}
+
+.bg-neutral-100 {
+    background-color: var(--clr-neutral-100);
+}
+
+.bg-neutral-200 {
+    background-color: var(--clr-neutral-200);
+}
+
+.text-align-left {
+    text-align: start;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+/* NAVBAR */
+
+
+/* NAVBAR */
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: #F5F5F5;
+    color: white;
+    display: grid;
+    place-content: center;
+}
+header {
+    display: flex;
+}
+
+/* SWITCH WRAPPER DESIGN */
+
+.switch-wrapper {
+    position: relative;
+    display: inline-flex;
+    text-align: center;
+    padding: 4px;
+    border: 1px solid lightgrey;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    background: #EEEDF2;
+    color: #82808C;
+  }
+  
+.switch-wrapper [type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+  
+.switch-wrapper [type="radio"]:checked#monthly ~ label[for="monthly"],
+.switch-wrapper [type="radio"]:checked#yearly ~ label[for="yearly"] {
+    color: var(--white);
+}
+  
+.switch-wrapper [type="radio"]:checked#monthly ~ label[for="monthly"]:hover,
+.switch-wrapper [type="radio"]:checked#yearly ~ label[for="yearly"]:hover {
+    background: transparent;
+}
+  
+.switch-wrapper
+    [type="radio"]:checked#monthly
+    + label[for="yearly"]
+    ~ .highlighter {
+    transform: none;
+}
+  
+.switch-wrapper
+    [type="radio"]:checked#yearly
+    + label[for="monthly"]
+    ~ .highlighter {
+    transform: translateX(100%);
+}
+  
+.switch-wrapper label {
+    font-size: 16px;
+    z-index: 1;
+    min-width: 100px;
+    line-height: 32px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: color 0.25s ease-in-out;
+}
+  
+.switch-wrapper label:hover {
+    background: #E8E8E9;
+}
+  
+.switch-wrapper .highlighter {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
+    border-radius: 30px;
+    background: #FFFFFF;
+    transition: transform 0.25s ease-in-out;
+}
+
+.card .hide {
+    display: none;
+}
+
+
+/* CARD DESIGN */
+.card-wrapper {
+    display: flex;
+    justify-content: flex-start;
+  align-items: flex-start;
+    
+}
+
+.card {
+    /* for demo only */
+    margin: 20px;
+    width: 300px;
+    height: 61vh;
+    
+     /* this makes the card smaller*/
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: #FFFFFF;   
+}
+
+.card-2 {
+    background-image: linear-gradient(#8281EF,#5CABFF, #1F8BFF);
+    color: ;
+}
+
+.card-icon-2 {
+    fill: #FFFFFF;
+}
+
+
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+} 
+
+.pricing-columns {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+}
+
+.card-content {
+    margin-right: 0.8rem;
+    margin-left: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #2E2A43;   
+}
+
+.card-title {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #2E2A43;   
+    margin-right: 1rem;
+    margin-left: 1.6rem;
+}
+
+.card-title-2 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #FFFFFF;  
+    margin-right: 1rem;
+    margin-left: 1.6rem;
+}
+
+.card-content-2 {
+    margin-right: 0.8rem;
+    margin-left: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #FFFFFF;   
+}
+
+.card-text- {
+    color: #FFFFFF;
+}
+
+.card-item {
+    margin-bottom: 1.2rem;
+    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    font-size: 38px;
+}
+
+.icon-wrapper {
+    margin: 0;
+}
+
+.card-icon-logo {
+    display: flex;
+    align-items: left;
+    margin-left: 1.6rem;
+    margin-top: 1.5rem;
+}
+
+.card-icon-logo-2 {
+    display: flex;
+    align-items: left;
+    margin-left: 1.6rem;
+    margin-top: 1.5rem;
+    fill: #FFFFFF;
+}
+card-text,
+.card-paragraph {
+    margin: 0;
+    height: ;
+}
+
+.card-text { 
+    text-align: left;
+    color: #2E2A43;
+}
+
+.card-text-2 {
+    color: #70B5FF;
+}
+
+.card-paragraph {  
+    font-size: 14px;
+}
+
+/* OTHER STUFF */
+
+ul {
+    margin: 0
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+.line {
+    border: 1px solid #DBD9D9;
+    width: 260px;
+    margin-bottom: 2.3rem;
+}
+/* BUTTONS DESIGN */
+
+.button1 {
+    padding: 8px 60px;
+    font-size: 1em;
+    border-radius: 8px;
+    margin: 15px 15px;
+    color: #080808;
+    background-color: #F5F5F5;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;  
+}
+
+.button2 {
+    padding: 8px 60px;
+    font-size: 1em;
+    border-radius: 8px;
+    margin: 15px 15px;
+    color: #080808;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+
+
+
+/* Mobile-first approach: Base styles for all screen sizes */
+
+/* Include the viewport meta tag in your HTML */
+/* <meta name="viewport" content="width=device-width, initial-scale=1"> */
+
+/* Define your root variables and global styles */
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    body {
+        font-size: var(--fs-300); /* Decrease font size for better readability */
+    }
+    .card-wrapper {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+    }
+
+    .card {
+        width: 100%; /* Make cards full width */
+        margin: 10px 0; /* Add some spacing between cards */
+    }
+    /* Adjust styles for small screens */
+}
+
+/* Media query for medium screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: var(--fs-400); /* Increase font size slightly */
+    }
+
+    .card {
+         /* Display two cards side by side */
+        margin: 10px; /* Adjust spacing */
+    }
+    /* Adjust styles for medium screens */
+}
+
+/* Media query for large screens */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    /* Adjust styles for large screens */
+    
+    /* Example adjustments */
+    .card {
+        width: calc(44.44% - 20px); /* Display three cards in a row */
+        margin: 10px; /* Adjust spacing */
+    }
+    
+    /* Adjust other styles as needed */
+}
+
+/* Media query for very large screens */
+@media (min-width: 1441px) {
+    /* Adjust styles for very large screens */
+    
+    /* Example adjustments */
+    .card {
+        width: calc(44.44% - 20px); /* Display three cards in a row */
+        margin: 10px; /* Adjust spacing */
+    }
+    
+    
+    /* Adjust other styles as needed */
+}

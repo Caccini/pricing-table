@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+
+</head>
+<body>
+    <header>
+        
+    </header>
+    <div class="container">
+        <div class="pricing-columns">
+            <h1>Plans and Pricing</h1>
+            <div class="switch-wrapper">
+                <input id="monthly" type="radio" name="switch" checked>
+                <input id="yearly" type="radio" name="switch">
+                <label for="monthly">Monthly</label>
+                <label for="yearly">Yearly</label>
+                <span class="highlighter"></span>
+            </div>
+            <!-- <div class="toggle-btn">
+                <div class="option" onclick="toggleSwitch('annual')">Annual</div>
+                <div class="option" onclick="toggleSwitch('monthly')">Monthly</div>
+                <label class="switch">
+                    <input type="checkbox" id="checbox" onclick="check()">
+                    <span class="slider round"></span>
+                </label>
+            </div> -->
+            <div class="card-wrapper">
+                <div class="card bg-neutral-100 text-align-center">
+                        <img class="card-icon-logo" src="images/user.svg" alt="">
+                        <h1 class="card-title">Basic</h1>
+                        <p class="card-title">A single licence for freelance designers or developers.</p>
+                        <h2 class="price monthly | card-title">&dollar;11</h2>
+                        <h2 class="price yearly hide | card-title">&dollar;132</h2>
+                        <hr class="line">
+                        <ul class="list">
+                            <li class="card-item">
+                                <div class="icon-wrapper">
+                                    <img class="card-icon" src="images/eye.svg" alt="">
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="card-text">Unlimited viewers</h4>
+                                    <p class="card-paragraph">Show-off your work to    everyone</p>
+                                </div>
+                            </li>
+                            <li class="card-item">
+                                <div class="icon-wrapper">
+                                    <img class="card-icon" src="images/picture-edit.svg" alt="">
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="card-text">Up to 2 editors</h4>
+                                    <p class="card-paragraph">Edit with your buddy</p>
+                                </div>
+                            </li>                                               
+                            <li class="card-item">
+                                <div class="icon-wrapper">
+                                    <img class="card-icon" src="images/folder.svg" alt="">
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="card-text">Up to 3 projects</h4>
+                                    <p class="card-paragraph">Easily customizable global styles</p>
+                                </div>
+                            </li>
+                            <!-- <li>Email Support</li> -->
+                        </ul>
+                        <hr class="line">
+                        <a href="#" class="button button1">Get started</a>
+                </div>
+                <div class="card bg-neutral-100 text-align-center | card-2">
+                    <svg class="card-icon-logo-2" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -1.5 24 24" width="32" fill="currentColor"><path d="M3.534 11.07a1 1 0 1 1 .733 1.86A3.579 3.579 0 0 0 2 16.26V18a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1.647a3.658 3.658 0 0 0-2.356-3.419 1 1 0 1 1 .712-1.868A5.658 5.658 0 0 1 14 16.353V18a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3v-1.74a5.579 5.579 0 0 1 3.534-5.19zM7 1a4 4 0 0 1 4 4v2a4 4 0 1 1-8 0V5a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v2a2 2 0 1 0 4 0V5a2 2 0 0 0-2-2zm9 17a1 1 0 0 1 0-2h1a1 1 0 0 0 1-1v-1.838a3.387 3.387 0 0 0-2.316-3.213 1 1 0 1 1 .632-1.898A5.387 5.387 0 0 1 20 15.162V17a3 3 0 0 1-3 3h-1zM13 2a1 1 0 0 1 0-2 4 4 0 0 1 4 4v2a4 4 0 0 1-4 4 1 1 0 0 1 0-2 2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"></path></svg>
+                    <h1 class="card-title-2">Pro</h1>
+                    <p class="card-title-2">Perfect for design teams, companies and startups.</p>
+                    <h2 class="price monthly | card-title-2">&dollar;18</h2>
+                    <h2 class="price yearly hide | card-title-2">&dollar;216</h2>
+                    <hr class="line">
+                    <ul class="list">
+                        <li class="card-item">
+                            <div class="icon-wrapper">
+                                <svg class="card-icon-2" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -6 24 24" width="32" fill="currentColor"><path d="M18 6c0-1.81-3.76-3.985-8.007-4C5.775 1.985 2 4.178 2 6c0 1.825 3.754 4.006 7.997 4C14.252 9.994 18 7.82 18 6zm-8 6c-5.042.007-10-2.686-10-6S4.984-.017 10 0c5.016.017 10 2.686 10 6s-4.958 5.993-10 6zm0-2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg>
+                            </div>
+                            <div class="card-content-2">
+                                <h4 class="card-text-">Unlimited users</h4>
+                                <p class="card-paragraph">Get the whole team on it</p>
+                            </div>
+                        </li>
+                        <li class="card-item">
+                            <div class="icon-wrapper">
+                                <svg class="card-icon-2" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -4 24 24" width="32" fill="currentColor"><path d="M2,13 L2,9 C2,9.55228475 1.55228475,10 1,10 C0.44771525,10 0,9.55228475 0,9 L0,7 C0,6.44771525 0.44771525,6 1,6 C1.55228475,6 2,6.44771525 2,7 L2,3 C2,3.55228475 1.55228475,4 1,4 C0.44771525,4 0,3.55228475 0,3 C0,1.34314575 1.34314575,0 3,0 C3.55228475,0 4,0.44771525 4,1 C4,1.55228475 3.55228475,2 3,2 L7,2 C6.44771525,2 6,1.55228475 6,1 C6,0.44771525 6.44771525,0 7,0 L10,0 C10.5522847,0 11,0.44771525 11,1 C11,1.55228475 10.5522847,2 10,2 L14,2 C13.4477153,2 13,1.55228475 13,1 C13,0.44771525 13.4477153,0 14,0 L17,0 C18.6568542,0 20,1.34314575 20,3 L20,13 C20,14.6568542 18.6568542,16 17,16 L3,16 C1.34314575,16 0,14.6568542 0,13 C0,12.4477153 0.44771525,12 1,12 C1.55228475,12 2,12.4477153 2,13 Z M18,8.5026802 L18,3 C18,2.44771525 17.5522847,2 17,2 L3,2 C2.44771525,2 2,2.44771525 2,3 L2,13 C2,13.5522847 2.44771525,14 3,14 L6.50438248,14 L10.8932397,6.67849374 C11.7451066,5.25740655 13.5877,4.79596234 15.0087872,5.64782923 C15.2178633,5.77315933 15.4108848,5.92350444 15.5835825,6.09553916 L18,8.5026802 Z M18,11.3256835 L14.1720913,7.51246986 C14.1145254,7.45512495 14.0501849,7.40500991 13.9804929,7.36323321 C13.5067971,7.07927758 12.8925994,7.23309232 12.6086437,7.70678805 L8.83619472,14 L17,14 C17.5522847,14 18,13.5522847 18,13 L18,11.3256835 Z M6,9 C4.34314575,9 3,7.65685425 3,6 C3,4.34314575 4.34314575,3 6,3 C7.65685425,3 9,4.34314575 9,6 C9,7.65685425 7.65685425,9 6,9 Z M6,7 C6.55228475,7 7,6.55228475 7,6 C7,5.44771525 6.55228475,5 6,5 C5.44771525,5 5,5.44771525 5,6 C5,6.55228475 5.44771525,7 6,7 Z"></path></svg>                            </div>
+                            <div class="card-content-2">
+                                <h4 class="card-text-">Sharing links for everyone</h4>
+                                <p class="card-paragraph">Flexibly adaptable universal styles</p>
+                            </div>
+                        </li>                                               
+                        <li class="card-item">
+                            <div class="icon-wrapper">
+                                <svg class="card-icon-2" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -4 24 24" width="32" fill="currentColor"><path d="M17 4H9.415l-.471-1.334A1.001 1.001 0 0 0 8 2H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm-6.17-2H17a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3h5c1.306 0 2.417.835 2.83 2z"></path></svg>
+
+                            </div>
+                            <div class="card-content-2">
+                                <h4 class="card-text-">Endless projects</h4>
+                                <p class="card-paragraph">Create endlessly with this plan</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr class="line">
+                    <a href="#" class="button button2">Get started</a>
+                </div>                               
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
